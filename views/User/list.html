@@ -1,0 +1,91 @@
+<h1 class="page-header">Users ({{items.length}})</h1>
+
+<div class="row">
+    <div class="col-md-8">
+        <table class="table table-condensed table-hover">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Gender</th>
+                    <th>Name</th>
+                    <th>E-mail</th>
+                    <th>Date of birth</th>
+                    <th>
+                        <a ng-click="selectItem()" href="javascript:void(null)" title="Edit"
+                           class="btn btn-success btn-xs">
+                            <i class="fa-plus-circle fa fa-lg"></i>
+                        </a>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="i in items">
+                    <td class="col-md-1">{{i.id}}</td>
+                    <td class="col-md-1"><i class="fa-{{i.gender.id === 'unknown' ? 'question-circle' : i.gender.id }} fa fa-lg"></i></td>
+                    <td class="col-md-3">{{i.firstName}} {{i.lastName}}</td>
+                    <td class="col-md-3">{{i.email}}</td>
+                    <td class="col-md-2">{{i.dateOfBirth|date:'yyyy-MM-dd'}}</td>
+                    <td class="btn-group col-md-2">
+                        <a ng-click="selectItem(i.id)" href="javascript:void(null)" title="Edit" class="btn btn-default btn-xs">
+                            <i class="fa-edit fa fa-lg"></i>
+                        </a>
+                        <a href="/users/{{i.id}}" target="_blank" title="Info" class="btn btn-info btn-xs">
+                            <i class="fa-info-circle fa fa-lg"></i>
+                        </a>
+                        <a ng-click="removeItem(i.id)" href="javascript:void(null)" title="Remove" class="btn btn-danger btn-xs">
+                            <i class="fa-times-circle fa fa-lg"></i>
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="col-md-4">
+        <form name="userForm" ng-submit="saveUserData()" class="form-horizontal" method="POST">
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <select ng-model="item.gender"
+                        ng-options="option.name for option in types.gender track by option.id"
+                        required name="gender" id="gender" class="form-control"
+                        ></select>
+            </div>
+            <div class="form-group">
+                <label for="firstName">First name</label>
+                <input ng-model="item.firstName"
+                       required name="firstName" id="firstName" class="form-control"/>
+
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last name</label>
+                <input ng-model="item.lastName"
+                       required name="lastName" id="lastName" class="form-control"/>
+
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input ng-model="item.email"
+                       required type="email" name="email" id="email" class="form-control"/>
+
+            </div>
+            <div class="form-group">
+                <label for="dateOfBirth">Date of birth</label>
+                <input ng-model="item.dateOfBirth"
+                       type="date"
+                       required="required"
+                       maxlength="10"
+                       placeholder="YYYY-MM-DD"
+                       max="{{ now|date:'yyyy-MM-dd' }}"
+                       name="dateOfBirth" id="dateOfBirth" class="form-control"/>
+                <p class="text-muted">{{ item.dateOfBirth }}</p>
+            </div>
+            <div class="form-group">
+                <button class="btn-default btn btn-lg pull-right">
+                    <i class="fa-save fa"></i>
+                    Save
+                </button>
+            </div>
+        </form>
+
+    </div>
+</div>

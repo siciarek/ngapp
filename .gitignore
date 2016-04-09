@@ -1,3 +1,7 @@
+/temp
+/nbproject
+/.idea
+
 # Logs
 logs
 *.log
