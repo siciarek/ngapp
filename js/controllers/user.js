@@ -1,4 +1,4 @@
-app.controller('UserController', ['$scope', '$interval', '$routeParams', 'User',
+angular.module('app').controller('UserController', ['$scope', '$interval', '$routeParams', 'User',
     function ($scope, $interval, $routeParams, User) {
 
         var __init = function () {

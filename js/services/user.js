@@ -1,4 +1,4 @@
-app.service('User', function ($http, $filter, $q, $rootScope) {
+angular.module('app').service('User', function ($http, $filter, $q, $rootScope) {
 
     var _defaultItem = {
         id: null,

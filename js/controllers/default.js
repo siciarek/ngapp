@@ -1,4 +1,4 @@
-app.controller('DefaultController', ['$scope', '$rootScope', '$interval', 'WeatherReport', function ($scope, $rootScope, $interval, WeatherReport) {
+angular.module('app').controller('DefaultController', ['$scope', '$rootScope', '$interval', 'WeatherReport', function ($scope, $rootScope, $interval, WeatherReport) {
 
         var getWeatherForecast = function () {
             return WeatherReport.getReport()

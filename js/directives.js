@@ -1,4 +1,4 @@
-app.directive('notificationInfo', function () {
+angular.module('app').directive('notificationInfo', function () {
     return {
         templateUrl: 'templates/notification/info.html',
         restrict: 'E',
@@ -6,7 +6,7 @@ app.directive('notificationInfo', function () {
     };
 });
 
-app.directive('notificationError', function () {
+angular.module('app').directive('notificationError', function () {
     return {
         templateUrl: 'templates/notification/error.html',
         restrict: 'E',
@@ -14,7 +14,7 @@ app.directive('notificationError', function () {
     };
 });
 
-app.directive('list', function () {
+angular.module('app').directive('list', function () {
     return {
         templateUrl: 'templates/list.html',
         restrict: 'E',

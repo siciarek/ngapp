@@ -1,4 +1,4 @@
-app.directive('typeNip', function () {
+angular.module('app').directive('typeNip', function () {
     return {
         require: 'ngModel',
         link: function (scope, element, attr, control) {
@@ -18,7 +18,7 @@ app.directive('typeNip', function () {
     };
 });
 
-app.directive('typePesel', function () {
+angular.module('app').directive('typePesel', function () {
     return {
         require: 'ngModel',
         link: function (scope, element, attr, control) {

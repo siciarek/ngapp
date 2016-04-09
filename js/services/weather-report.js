@@ -1,4 +1,4 @@
-app.factory('WeatherReport', function ($http, $q, $rootScope) {
+angular.module('app').factory('WeatherReport', function ($http, $q, $rootScope) {
     return {
         getReport: function () {
             // the $http API is based on the deferred/promise APIs exposed by the $q service
