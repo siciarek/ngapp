@@ -27,4 +27,5 @@ Important issues
     * Includes
     * AngularJS API https://docs.angularjs.org/api/ng/function
     * Validation
-    * Authentication
+    * Authentication https://medium.com/opinionated-angularjs/techniques-for-authentication-in-angularjs-applications-7bbf0346acec#.ptiviwaur
+

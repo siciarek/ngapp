@@ -2,7 +2,7 @@
 <html ng-app="app">
     <head>
         <title>{{name}}</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <!-- VENDORS: -->
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.css" type="text/css"/>
@@ -11,8 +11,7 @@
 
         <!-- APPLICATION: -->
 
-        <link rel="stylesheet" href="/assets/css/app.css" type="text/css"/>
-        <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/ico"/>
+        <link rel="stylesheet" href="/css/app.css" type="text/css"/>
     </head>
 
     <body>
@@ -32,8 +31,16 @@
 
         <!-- APPLICATION: -->
 
-        <script type="text/javascript" src="/app/app.module.js"></script>
-        <script type="text/javascript" src="/app/app.routes.js"></script>
-        <script type="text/javascript" src="/app/components/home/homeController.js"></script>
+        <script type="text/javascript" src="/js/app.js"></script>
+        <script type="text/javascript" src="/js/routing.js"></script>
+        <script type="text/javascript" src="/js/directives.js"></script>
+        <script type="text/javascript" src="/js/types.js"></script>
+        <script type="text/javascript" src="/js/filters.js"></script>
+
+        <script type="text/javascript" src="/js/services/weather-report.js"></script>
+        <script type="text/javascript" src="/js/services/user.js"></script>
+
+        <script type="text/javascript" src="/js/controllers/default.js"></script>
+        <script type="text/javascript" src="/js/controllers/user.js"></script>
     </body>
 </html>
