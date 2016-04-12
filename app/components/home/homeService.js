@@ -2,6 +2,8 @@ angular.module('app')
         .service('homeService', [homeService]);
 
 function homeService() {
+    'use strict';
+
     this.getData = function () {
         return  {
             name: 'Zażółć gęślą jaźń',
@@ -36,6 +38,6 @@ function homeService() {
                 }
             ]
         };
-    }
+    };
 }
-;
+

@@ -2,6 +2,8 @@ angular.module('app')
         .config(['$routeProvider', '$locationProvider', routes]);
 
 function routes($routeProvider, $locationProvider) {
+    'use strict';
+
     var routing = {
         '/': {
             controller: 'HomeController',
@@ -20,4 +22,3 @@ function routes($routeProvider, $locationProvider) {
     $routeProvider.otherwise({redirectTo: '/'});
     $routeProvider.caseInsensitiveMatch = false;
 }
-

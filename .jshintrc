@@ -128,6 +128,7 @@
 ],
 
     "globals"        : {        // Globals.
+        "angular": true,
         "toString": true,
         "module": true
    },
