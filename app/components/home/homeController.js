@@ -1,7 +1,10 @@
-angular.module('app')
-    .controller('HomeController', ['homeService', '$scope', homeController]);
+(function () {
+    'use strict';
+    
+    angular.module('app')
+            .controller('HomeController', ['homeService', '$scope', homeController]);
 
-function homeController (homeService, $scope) {
-
-    $scope.data = homeService.getData();
-}
+    function homeController(homeService, $scope) {
+        $scope.data = homeService.getData();
+    }
+})();
