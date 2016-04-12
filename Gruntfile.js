@@ -5,6 +5,17 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
+
+    jasmine: {
+      example: {
+      src: 'src/**/*.js',
+      options: {
+        specs: 'spec/**/*pec.js',
+        helpers: 'spec/helpers/**/*.js'
+      }
+    }
+  },
+
     uglify: {
       options: {
         banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
@@ -15,7 +26,7 @@ module.exports = function(grunt) {
       }
     },
     jshint: {
-      files: ['Gruntfile.js', 'js/**/*.js', 'test/**/*.js'],
+      files: ['Gruntfile.js', 'src/**/*.js', 'spec/**/*.js'],
       options: {
         jshintrc: '.jshintrc',
         globals: {
@@ -27,7 +38,8 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-jasmine');
 
-  // Default task(s).
   grunt.registerTask('default', ['jshint']);
+  grunt.registerTask('test', ['jasmine']);
 };
