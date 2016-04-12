@@ -9,10 +9,12 @@
         var routing = {
             '/': {
                 controller: 'HomeController',
+                controllerAs: 'home',
                 templateUrl: '/app/components/home/homeView.html'
             },
             '/info': {
                 controller: 'HomeController',
+                controllerAs: 'home',
                 templateUrl: '/app/components/home/infoView.html'
             }
         };
