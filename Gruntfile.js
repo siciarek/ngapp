@@ -27,22 +27,22 @@ module.exports = function (grunt) {
             },
         },
 
-        jasmine: {
-            example: {
-                src: 'src/**/*.js',
-                options: {
-                    specs: 'spec/**/*pec.js',
-                    helpers: 'spec/helpers/**/*.js'
-                }
-            }
-        },
-
         jshint: {
             files: ['Gruntfile.js', 'app/**/**/*.js'],
             options: {
                 jshintrc: '.jshintrc'
             }
         },
+
+        jasmine: {
+            example: {
+                src: 'app/**/**/*.js',
+                options: {
+                    specs: 'spec/**/*pec.js',
+                    helpers: 'spec/helpers/**/*.js'
+                }
+            }
+        }
     });
 
     grunt.loadNpmTasks('grunt-contrib-jshint');
@@ -50,7 +50,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-concat');
 
+    grunt.registerTask('test', ['jasmine']);
     grunt.registerTask('min', ['concat', 'uglify']);
     grunt.registerTask('default', ['jshint', 'min']);
-    grunt.registerTask('test', ['jasmine']);
 };
