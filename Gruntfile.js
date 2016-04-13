@@ -4,11 +4,9 @@ module.exports = function (grunt) {
     // Project configuration.
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-
         clean: {
             folder: ['js']
         },
-
         ngAnnotate: {
             options: {
                 singleQuotes: true
@@ -19,7 +17,6 @@ module.exports = function (grunt) {
                 }
             }
         },
-
         uglify: {
             options: {
                 banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n',
@@ -31,7 +28,6 @@ module.exports = function (grunt) {
                 dest: 'js/app.min.js'
             }
         },
-
         concat: {
             options: {
                 banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n',
@@ -42,20 +38,31 @@ module.exports = function (grunt) {
                 dest: 'js/app.js',
             },
         },
-
         jshint: {
             files: ['Gruntfile.js', 'app/**/**/*.js'],
             options: {
                 jshintrc: '.jshintrc'
             }
         },
-
         jasmine: {
             basic: {
-                src: [ ],
+                src: [ 'app/*.js', 'app/shared/**/*.js', 'app/components/**/*.js' ],
                 options: {
-                    specs: 'spec/**/**/*pec.js',
-                    helpers: 'spec/helpers/**/*.js'
+                    display: 'short', // 'short', 'full', 'none'
+                    vendor: [
+                        'https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js',
+                        'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.js',
+                        'https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.js',
+                        'https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-resource.js',
+                        'https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-cookies.js',
+                        'https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-sanitize.js',
+                        'https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-touch.js',
+                        'https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.js',
+                        'https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-route.js',
+                        'https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js'
+                    ],
+                    specs: 'tests/spec/**/**/*pec.js',
+                    helpers: 'tests/spec/helpers/**/*.js'
                 }
             }
         }
