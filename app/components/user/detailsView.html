@@ -1,3 +1,8 @@
-<h1 class="page-header">User</h1>
+<h1 class="page-header" ng-show="users.item !== null">User #{{users.item.id}}</h1>
 
-<pre>{{users.item|json}}</pre>
+<pre ng-show="users.item !== null">{{users.item|json}}</pre>
+
+<div class="alert alert-warning" ng-hide="users.item !== null">
+    <i class="fa-warning fa"></i>
+    No user found.
+</div>
