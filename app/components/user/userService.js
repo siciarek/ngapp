@@ -31,14 +31,15 @@
             var item = null;
 
             angular.forEach(items, function(e, i) {
-                if(e.id == parseInt(id)) {
-                    return item = e;
+                if(e.id === parseInt(id)) {
+                    item = e;
+                    return;
                 }
             });
-            
+
             return item;
         };
-        
+
         vm.getList = function () {
             return  {
                 name: 'User list',

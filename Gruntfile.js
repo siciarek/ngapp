@@ -4,6 +4,29 @@ module.exports = function (grunt) {
     // Project configuration.
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+
+        uglify: {
+            options: {
+                banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n',
+                mangle: false
+            },
+            build: {
+                src: 'js/app.js',
+                dest: 'js/app.min.js'
+            }
+        },
+
+        concat: {
+            options: {
+                banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n',
+                separator: '',
+            },
+            dist: {
+                src: ['app/**/**/*.js'],
+                dest: 'js/app.js',
+            },
+        },
+
         jasmine: {
             example: {
                 src: 'src/**/*.js',
@@ -13,15 +36,7 @@ module.exports = function (grunt) {
                 }
             }
         },
-        uglify: {
-            options: {
-                banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
-            },
-            build: {
-                src: 'src/<%= pkg.name %>.js',
-                dest: 'build/<%= pkg.name %>.min.js'
-            }
-        },
+
         jshint: {
             files: ['Gruntfile.js', 'app/**/**/*.js'],
             options: {
@@ -31,9 +46,11 @@ module.exports = function (grunt) {
     });
 
     grunt.loadNpmTasks('grunt-contrib-jshint');
-    grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-jasmine');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-concat');
 
-    grunt.registerTask('default', ['jshint']);
+    grunt.registerTask('min', ['concat', 'uglify']);
+    grunt.registerTask('default', ['jshint', 'min']);
     grunt.registerTask('test', ['jasmine']);
 };
