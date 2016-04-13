@@ -51,10 +51,10 @@ module.exports = function (grunt) {
         },
 
         jasmine: {
-            example: {
-                src: ['app/*.js', 'app/shared/**/*.js', 'app/components/**/*.js'],
+            basic: {
+                src: [ ],
                 options: {
-                    specs: 'spec/**/*pec.js',
+                    specs: 'spec/**/**/*pec.js',
                     helpers: 'spec/helpers/**/*.js'
                 }
             }
@@ -70,5 +70,5 @@ module.exports = function (grunt) {
 
     grunt.registerTask('test', ['jasmine']);
     grunt.registerTask('min', ['ngAnnotate', 'concat', 'uglify']);
-    grunt.registerTask('default', ['jshint', 'clean', 'min']);
+    grunt.registerTask('default', ['jshint', 'test', 'clean', 'min']);
 };
