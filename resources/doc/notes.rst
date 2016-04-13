@@ -34,8 +34,12 @@ Important issues
     * Directves
     * Service types (Factory, Service, Provider)
     * Includes
-    * AngularJS API https://docs.angularjs.org/api/ng/function
     * Validation
-    * Routing: https://scotch.io/tutorials/angular-routing-using-ui-router
-    * Authentication https://medium.com/opinionated-angularjs/techniques-for-authentication-in-angularjs-applications-7bbf0346acec#.ptiviwaur
+    * AngularJS API
+        - https://docs.angularjs.org/api/ng/function
+    * Routing
+        - https://scotch.io/tutorials/angular-routing-using-ui-router
+    * Authentication
+        - https://medium.com/opinionated-angularjs/techniques-for-authentication-in-angularjs-applications-7bbf0346acec#.ptiviwaur
+        - https://thinkster.io/angularjs-jwt-auth
 

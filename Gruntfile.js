@@ -46,7 +46,7 @@ module.exports = function (grunt) {
         },
         jasmine: {
             basic: {
-                src: [ 'app/*.js', 'app/shared/**/*.js', 'app/components/**/*.js' ],
+                src: ['app/*.js', 'app/shared/**/*.js', 'app/components/**/*.js'],
                 options: {
                     display: 'short', // 'short', 'full', 'none'
                     vendor: [
