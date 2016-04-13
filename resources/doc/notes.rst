@@ -9,6 +9,10 @@ AngularJS tutorials references
     * https://github.com/johnpapa/angular-styleguide
     * https://github.com/toddmotto/angular-styleguide
 
+UI Router problem:
+    * https://scotch.io/tutorials/angular-routing-using-ui-router
+    * http://stackoverflow.com/questions/28953289/using-controller-as-with-the-ui-router-isnt-working-as-expected
+
 ..code-block:: json
 
     {
@@ -27,5 +31,6 @@ Important issues
     * Includes
     * AngularJS API https://docs.angularjs.org/api/ng/function
     * Validation
+    * Routing: https://scotch.io/tutorials/angular-routing-using-ui-router
     * Authentication https://medium.com/opinionated-angularjs/techniques-for-authentication-in-angularjs-applications-7bbf0346acec#.ptiviwaur
 
