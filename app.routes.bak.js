@@ -25,6 +25,15 @@
 
         $routeProvider.otherwise({redirectTo: '/'});
         $routeProvider.caseInsensitiveMatch = false;
+
+        // Enable html5Mode for pushstate ('#'-less URLs)
+        // List of browsers that supports this feature: http://caniuse.com/#feat=history
+//        $locationProvider
+//                .html5Mode({
+//                    enabled: true,
+//                    requireBase: false,
+//                    rewriteLinks: true
+//                });
     }
 
 })();

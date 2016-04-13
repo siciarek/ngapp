@@ -2,29 +2,25 @@
     'use strict';
 
     angular.module('app')
-            .config(['$routeProvider', '$locationProvider', routes]);
+            .config(function ($stateProvider, $urlRouterProvider) {
 
-    function routes($routeProvider, $locationProvider) {
+                $urlRouterProvider.otherwise('/');
 
-        var routing = {
-            '/': {
-                controller: 'HomeController',
-                controllerAs: 'home',
-                templateUrl: '/app/components/home/homeView.html'
-            },
-            '/info': {
-                controller: 'HomeController',
-                controllerAs: 'home',
-                templateUrl: '/app/components/home/infoView.html'
-            }
-        };
+                $stateProvider
+                        .state('home', {
+                            url: '/',
+                            controllerAs: 'home',
+                            templateUrl: '/app/components/home/homeView.html'
+                        })
+                        .state('info', {
+                            url: '/info',
+                            templateUrl: '/app/components/home/infoView.html'
+                        })
+                        .state('contact', {
+                            url: '/contact',
+                            templateUrl: '/app/components/home/contactView.html'
+                        });
 
-        angular.forEach(routing, function (route, path) {
-            $routeProvider.when(path, route);
-        });
-
-        $routeProvider.otherwise({redirectTo: '/'});
-        $routeProvider.caseInsensitiveMatch = false;
-    }
+            });
 
 })();
