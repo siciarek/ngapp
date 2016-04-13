@@ -9,12 +9,12 @@
          $stateProvider
                  .state('userList', {
                      url: '/users',
-                     controller: 'UserController as users',
+                     controller: 'UserController as user',
                      templateUrl: '/app/components/user/listView.html'
                  })
                  .state('userDetails', {
                      url: '/users/{id:[1-9]\\d*}',
-                     controller: 'UserController as users',
+                     controller: 'UserController as user',
                      templateUrl: '/app/components/user/detailsView.html'
                  })
                  .state('home', {

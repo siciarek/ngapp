@@ -1,7 +1,7 @@
-<h1 class="page-header">{{users.list.name}}</h1>
+<h1 class="page-header">{{user.list.name}}</h1>
 
 <div class="list-group">
-    <a class="list-group-item" ng-repeat="u in users.list.items" ui-sref="userDetails({id: u.id})">
+    <a class="list-group-item" ng-repeat="u in user.list.items" ui-sref="userDetails({id: u.id})">
         <i class="fa-{{u.gender}} fa fa-lg"></i>
         {{u.firstName}} {{u.lastName}}
     </a>
