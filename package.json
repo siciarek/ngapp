@@ -12,6 +12,7 @@
     "grunt-contrib-jshint": "~1.0.0",
     "grunt-contrib-jasmine": "~1.0.3",
     "grunt-contrib-concat": "~1.0.0",
-    "grunt-ng-annotate": "~2.0.2"
+    "grunt-ng-annotate": "~2.0.2",
+    "grunt-contrib-clean": "~1.0.0"
   }
 }
