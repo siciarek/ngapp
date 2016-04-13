@@ -5,6 +5,16 @@
 
                 $urlRouterProvider.otherwise('/');
                 $stateProvider
+                        .state('userList', {
+                            url: '/users',
+                            controller: 'UserController as users',
+                            templateUrl: '/app/components/user/listView.html'
+                        })
+                        .state('userDetails', {
+                            url: '/users/{id:[1-9]\\d*}',
+                            controller: 'UserController as users',
+                            templateUrl: '/app/components/user/detailsView.html'
+                        })
                         .state('home', {
                             url: '/',
                             views: {
@@ -13,8 +23,7 @@
                                     templateUrl: '/app/components/home/homeView.html'
                                 }
                             }
-                        }
-                        )
+                        })
                         .state('info', {
                             url: '/info',
                             templateUrl: '/app/components/home/infoView.html'

@@ -1,0 +1,8 @@
+<h1 class="page-header">{{users.list.name}}</h1>
+
+<div class="list-group">
+    <a class="list-group-item" ng-repeat="u in users.list.items" ui-sref="userDetails({id: u.id})">
+        <i class="fa-{{u.gender}} fa"></i>
+        {{u.firstName}} {{u.lastName}}
+    </a>
+</div>
