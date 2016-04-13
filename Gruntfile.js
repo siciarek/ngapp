@@ -15,7 +15,7 @@ module.exports = function (grunt) {
             },
             app: {
                 files: {
-                    'js/app.ann.js': ['app/**/**/*.js']
+                    'js/app.ann.js': ['app/*.js', 'app/shared/**/*.js', 'app/components/**/*.js']
                 }
             }
         },
@@ -38,7 +38,7 @@ module.exports = function (grunt) {
                 separator: '',
             },
             dist: {
-                src: ['app/**/**/*.js'],
+                src: ['app/*.js', 'app/shared/**/*.js', 'app/components/**/*.js'],
                 dest: 'js/app.js',
             },
         },
@@ -52,7 +52,7 @@ module.exports = function (grunt) {
 
         jasmine: {
             example: {
-                src: 'app/**/**/*.js',
+                src: ['app/*.js', 'app/shared/**/*.js', 'app/components/**/*.js'],
                 options: {
                     specs: 'spec/**/*pec.js',
                     helpers: 'spec/helpers/**/*.js'

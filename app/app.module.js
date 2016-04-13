@@ -17,9 +17,15 @@
 
     angular.module('app').run(['$rootScope', function ($rootScope) {
 
-        $rootScope.app = {
-            name: 'NGAPP',
-            description: 'AngularJS (commonly referred to as "Angular" or "Angular.js") is an open-source web application framework mainly maintained by Google and by a community of individuals and corporations to address many of the challenges encountered in developing single-page applications.'
-        };
-    }]);
+            // UI-Router scrolling top bug workaround:
+            $rootScope
+                    .$on('$viewContentLoaded', function () {
+                        jQuery('html, body').animate({ scrollTop: 0 }, 100);
+                    });
+
+            $rootScope.app = {
+                name: 'NGAPP',
+                description: 'AngularJS (commonly referred to as "Angular" or "Angular.js") is an open-source web application framework mainly maintained by Google and by a community of individuals and corporations to address many of the challenges encountered in developing single-page applications.'
+            };
+        }]);
 })();
