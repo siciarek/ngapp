@@ -9,11 +9,14 @@ AngularJS tutorials references
     * https://github.com/johnpapa/angular-styleguide
     * https://github.com/toddmotto/angular-styleguide
 
-UI Router problem:
+UI Router
     * http://angular-ui.github.io/ui-router/
     * https://github.com/angular-ui/ui-router
     * https://scotch.io/tutorials/angular-routing-using-ui-router
     * http://stackoverflow.com/questions/28953289/using-controller-as-with-the-ui-router-isnt-working-as-expected
+
+Setting up Grunt
+    * http://g00glen00b.be/angular-grunt/
 
 ..code-block:: json
 
