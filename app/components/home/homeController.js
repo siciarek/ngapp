@@ -8,6 +8,7 @@
         /*jshint validthis:true */
         var vm = this;
         vm.data = homeService.getData();
+
         $scope.home = vm;
     }
 })();
