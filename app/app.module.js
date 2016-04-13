@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    angular.module('app', ['ngSanitize', 'ngRoute', 'ui.router']);
+    angular.module('app', ['ngSanitize', 'ui.router']);
 
     angular.module('app')
             .config(['$locationProvider', function ($locationProvider) {
