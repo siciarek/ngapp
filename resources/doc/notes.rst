@@ -10,6 +10,7 @@ AngularJS tutorials references
     * https://github.com/toddmotto/angular-styleguide
 
 UI Router problem:
+    * https://github.com/angular-ui/ui-router
     * https://scotch.io/tutorials/angular-routing-using-ui-router
     * http://stackoverflow.com/questions/28953289/using-controller-as-with-the-ui-router-isnt-working-as-expected
 
