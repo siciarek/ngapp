@@ -2,11 +2,12 @@
     'use strict';
 
     angular.module('app')
-            .controller('HomeController', ['homeService', homeController]);
+            .controller('HomeController', ['homeService', '$scope', homeController]);
 
-    function homeController(homeService) {
+    function homeController(homeService, $scope) {
         /*jshint validthis:true */
         var vm = this;
         vm.data = homeService.getData();
+        $scope.home = vm;
     }
 })();
