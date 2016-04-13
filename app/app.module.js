@@ -18,7 +18,7 @@
     angular.module('app').run(function ($rootScope) {
 
         $rootScope.app = {
-            name: 'AngularJS App',
+            name: 'NGAPP',
             description: 'AngularJS (commonly referred to as "Angular" or "Angular.js") is an open-source web application framework mainly maintained by Google and by a community of individuals and corporations to address many of the challenges encountered in developing single-page applications.'
         };
     });
