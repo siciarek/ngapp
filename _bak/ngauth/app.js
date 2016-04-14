@@ -17,7 +17,7 @@
             response: function (res) {
 
                 var token = res.data ? res.data.token : null;
-                
+
                 if (token) {
                     auth.saveToken(token);
                 }
@@ -121,7 +121,7 @@
             .factory('authInterceptor', authInterceptor)
             .service('user', userService)
             .service('auth', authService)
-            .constant('API', 'http://test-routes.herokuapp.com')
+            .constant('API', 'http://localhost:3002')
             .config(function ($httpProvider) {
                 $httpProvider.interceptors.push('authInterceptor');
             })

@@ -9,6 +9,9 @@ AngularJS tutorials references
     * https://github.com/johnpapa/angular-styleguide
     * https://github.com/toddmotto/angular-styleguide
 
+Node.js
+    * https://nodejs.org/en/download/package-manager/
+
 UI Router
     * http://angular-ui.github.io/ui-router/
     * https://github.com/angular-ui/ui-router
