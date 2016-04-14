@@ -42,4 +42,5 @@ Important issues
     * Authentication
         - https://medium.com/opinionated-angularjs/techniques-for-authentication-in-angularjs-applications-7bbf0346acec#.ptiviwaur
         - https://thinkster.io/angularjs-jwt-auth
+        - https://github.com/GoThinkster/test-routes
 
