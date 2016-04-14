@@ -9,7 +9,8 @@ module.exports = function (grunt) {
         },
         ngAnnotate: {
             options: {
-                singleQuotes: true
+                singleQuotes: true,
+                separator: ''
             },
             app: {
                 files: {
@@ -31,7 +32,7 @@ module.exports = function (grunt) {
         concat: {
             options: {
                 banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n',
-                separator: '',
+                separator: ''
             },
             dist: {
                 src: ['app/*.js', 'app/shared/**/*.js', 'app/components/**/*.js'],
