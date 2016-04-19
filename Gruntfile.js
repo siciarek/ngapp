@@ -5,7 +5,18 @@ module.exports = function (grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         clean: {
-            folder: ['js']
+            folder: ['js', 'css']
+        },
+        cssmin: {
+            options: {
+                shorthandCompacting: false,
+                roundingPrecision: -1
+            },
+            target: {
+                files: {
+                    'css/app.css': ['assets/css/bootstrap-adjustments.css', 'assets/css/app.css']
+                }
+            }
         },
         ngAnnotate: {
             options: {
@@ -75,8 +86,9 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
 
     grunt.registerTask('test', ['jasmine']);
-    grunt.registerTask('min', ['ngAnnotate', 'concat', 'uglify']);
+    grunt.registerTask('min', ['ngAnnotate', 'concat', 'uglify', 'cssmin']);
     grunt.registerTask('default', ['jshint', 'test', 'clean', 'min']);
 };
